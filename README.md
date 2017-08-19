@@ -2,6 +2,9 @@
 
 https://cryptopals.com/
 
+## Useful links
+- http://www.devdungeon.com/content/working-binary-data-python
+
 ## Set 1 - Basics
 
 ### Convert Hex to Base64

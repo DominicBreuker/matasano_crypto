@@ -17,7 +17,7 @@ def guess_xor_ciphertext():
         decrypt = decypt_single_byte_xor(b, 1)[0]
         print(ciphertext, decrypt)
         decrypt_scores.append((ciphertext, decrypt))
-    return sorted(decrypt_scores, reverse=True, key=lambda x: x[1][1])[0]
+    return sorted(decrypt_scores, reverse=True, key=lambda x: x[1][2])[0]
 
 if __name__ == "__main__":
     print("c4")

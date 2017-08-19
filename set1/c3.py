@@ -60,7 +60,7 @@ def decypt_single_byte_xor(b, num_candidates=1):
         decrpytion = decrypt_single_btye_xor_with_key(b, key_byte)
         key_scores[key_byte] = score_decrypted_bytes(decrpytion)
     result = sorted([(key_byte, score) for key_byte, score in key_scores.items()], reverse=True, key=lambda tuple: tuple[1])[0:num_candidates]
-    return [(decrypt_single_btye_xor_with_key(b, key_byte), score) for key_byte, score in result]
+    return [(decrypt_single_btye_xor_with_key(b, key_byte), key_byte, score) for key_byte, score in result]
 
 def decypt_single_byte_xor_best_guess(b):
     return decypt_single_byte_xor(b, 1)[0][0]
