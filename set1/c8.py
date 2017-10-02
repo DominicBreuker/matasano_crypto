@@ -1,7 +1,5 @@
 import os
 
-from c7 import decrypt_aes_ecb
-
 data_file = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                          "data", "8.txt")
 
@@ -9,6 +7,7 @@ block_size = 16
 
 
 def read_ciphertexts():
+    """Read all lines of the ciphertext file into an array"""
     with open(data_file, "r") as f:
         for line in f:
             yield line.strip()
